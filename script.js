@@ -47,7 +47,7 @@ class newScroll{
                     console.log( descDoc.querySelector("#Content"));
                     console.log(value[2]);
                     descDoc.querySelector("#Content").innerHTML = value[2];
-                    descDoc.querySelector("#selectedImage").src = "/assets/"+value[0];
+                    descDoc.querySelector("#selectedImage").src = "./assets/"+value[0];
                     descDoc.querySelector("#Price").innerHTML = "RP. "+ format(value[1]);
                     // this.Div.querySelector('#Chosen').innerHTML = key;
                     //console.log(document.getElementsByClassName("ScrollingDisplay")[0].querySelectorAll('h1')[0].innerHTML);
@@ -71,7 +71,7 @@ class newScroll{
         let iter = 0;
         for (const [key, value] of Object.entries(Data.Shop[this.Label])) {
             if (iter == this.curIndex) {
-                this.Div.querySelectorAll(".previewImage")[0].src = "/assets/"+value[0];
+                this.Div.querySelectorAll(".previewImage")[0].src = "./assets/"+value[0];
                 this.Div.querySelector("#Price").innerHTML = "RP. "+ format(value[1]);
                 this.Div.querySelector('#Chosen').innerHTML = key;
                 //console.log(document.getElementsByClassName("ScrollingDisplay")[0].querySelectorAll('h1')[0].innerHTML);
