@@ -1,5 +1,5 @@
-@font-face { font-family: Jellies; src: url('./assets/Jellies.ttf'); } 
-@font-face { font-family: Bubbly; src: url('./assets/SuperBubbly.ttf'); } 
+@font-face { font-family: Jellies; src: url('/assets/Jellies.ttf'); } 
+@font-face { font-family: Bubbly; src: url('/assets/SuperBubbly.ttf'); } 
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {
@@ -44,7 +44,7 @@ p{
 
 body{
     margin: 0;
-    background-image: url("./assets/BG1.png");
+    background-image: url("/assets/BG1.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;  
