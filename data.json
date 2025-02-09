@@ -1,0 +1,19 @@
+{
+    "Shop" : {
+        "Slimes" : {
+            "Slime" : [
+                "Slime.png",
+                25000,
+                "Sticky stress toy made out of glue"
+            ]
+        }, 
+        "Stress Balls" : {
+            "Stress Ball" : [
+                "StressBall.png",
+                10000,
+                "Orbeeze filled stress ball"
+            ]
+        }
+       
+    }
+}
