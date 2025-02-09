@@ -1,4 +1,4 @@
-@font-face { font-family: Jellies; src: url('/assets/Jellies.ttf'); } 
+@font-face { font-family: Jellies; src: url('./assets/Jellies.ttf'); } 
 @font-face { font-family: Bubbly; src: url('/assets/Super\ Bubbly.ttf'); } 
 
 /* Hide scrollbar for Chrome, Safari and Opera */
