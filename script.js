@@ -86,10 +86,10 @@ class newScroll{
         document.body.querySelector("#ScrollContainers").appendChild(this.Div);
         this.Div.removeAttribute("hidden");
         this.Div.querySelector("#title").innerHTML = this.Label;
-        
        
         this.revolve(1);
         
+       
     }
    
 }
@@ -143,19 +143,45 @@ function Init(json){
         CreatedScroll.Div.querySelector(".previewImage").onclick = function() {
             CreatedScroll.showDescription()
         }
-        CreatedScroll.Div.querySelector("#LeftArrow").onclick = function() {
-            CreatedScroll.revolve(-1);
-        }
-        CreatedScroll.Div.querySelector("#RightArrow").onclick = function() {
-            CreatedScroll.revolve(1);
-        }
 
+        if (Object.keys(Data.Shop[CreatedScroll.Label]).length < 2) {
+           CreatedScroll.Div.querySelector("#LeftArrow").hidden = "hidden";
+           CreatedScroll.Div.querySelector("#RightArrow").hidden = "hidden";
+        } else {
+            CreatedScroll.init();
+            CreatedScroll.revolve(0);
+           
+            CreatedScroll.Div.querySelector("#LeftArrow").onclick = function() {
+                CreatedScroll.revolve(-1);
+            }
+            CreatedScroll.Div.querySelector("#RightArrow").onclick = function() {
+                CreatedScroll.revolve(1);
+            }
+        }
+ 
         scrolls.push(CreatedScroll);
+    }
+    
+    document.getElementById("Landing").querySelectorAll(".CButton")[0].onclick = function(){
+        document.getElementById("GOTOPRODUCTS").scrollIntoView();
+    }
+
+    document.getElementById("IG").onclick = function(){
+        window.location.href = 'https://www.instagram.com/lunarapampiana/';
     }
   
     requestAnimationFrame(render);
 }
 
 
-console.log("sigma sigma skibidi");
+
+
+
+
+
+
+
+
+
+
 

@@ -1,3 +1,4 @@
+
 @font-face { font-family: Jellies; src: url('./assets/Jellies.ttf'); } 
 @font-face { font-family: Bubbly; src: url('./assets/SuperBubbly.ttf'); } 
 
@@ -13,6 +14,7 @@
 }
 
 /* General */
+
 
 h1{
     font-family: Jellies;
@@ -44,10 +46,7 @@ p{
 
 body{
     margin: 0;
-    background-image: url("./assets/Asdasd.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;  
+    background-color: black;
     overflow-x: hidden;
 
  
@@ -55,7 +54,8 @@ body{
 
 html{
     overflow-x: hidden;
-
+    user-select: none;
+    scroll-behavior: smooth;
 }
 
 /* Nested */
@@ -92,6 +92,16 @@ html{
 
 /* Classes */
 
+.BG{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/BG1.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;  
+}
+
 .Description {
     position: fixed;
     width: 90%;
@@ -111,7 +121,7 @@ html{
 
 .Description > p{
     position: absolute;
-    bottom: 150px;
+    top: 225px;
     margin: 0px;
     left: 50%;
     transform: translate(-50%,0%);
@@ -120,6 +130,7 @@ html{
     -webkit-text-stroke: .1px rgb(0, 0, 0);
     font-size: 150%;
     filter: drop-shadow(0px 1px 10px #000000);
+    max-height: 100px;
 
 }
 
@@ -168,6 +179,46 @@ html{
     left: 50%;
 }
 
+.CButton {
+    width: auto;
+    height: auto;
+    padding: 10px;
+ 
+    background: linear-gradient(0deg, rgb(118, 175, 255) 0%, rgb(161, 192, 236) 100%);
+    
+    position: relative;
+    
+    border-radius: 100px;
+    border-style: solid;
+
+    font-size: 1.5em;
+    font-family: Bubbly;
+    color: rgb(255, 255, 255);
+  
+    transition: padding .2s, color .2s, filter .2s;
+
+}
+
+.CButton:hover{
+    padding: 20px;
+    color: black;
+}
+
+.CButton:active{
+    padding: 12px;
+    color: rgb(200, 255, 225);
+    
+}
+
+
+#Landing >.CButton {
+    position: absolute;
+    top: 450px;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .Arrow {
   
     width: 100px;
@@ -178,7 +229,6 @@ html{
     filter: drop-shadow(0px 1px 10px #000000);
     
 }
-
 
 
 .Arrow:hover{
@@ -194,6 +244,8 @@ html{
 
 
 /* IDs */
+
+
 
 #Close {
     position: absolute;
@@ -225,33 +277,99 @@ html{
     flex-wrap: wrap;
 
     justify-content: center;
-    padding-bottom: 300px;
+    padding-bottom: 100px;
 }
 
 #Container{
-    margin-top: 150px;
+   
     z-index: 1;
     width: 100%;
-    background-color:  black;
-    margin-top: 200px;
+    background-color: rgb(115, 148, 255);
+   
     margin-bottom: 100px;
 
     padding-top: 50px;
     padding-bottom: 50px;
     left: 50%;
+    height:  auto;
     transform: translate(-50%,0%); 
+   
     /*background-color: rgb(255, 255, 255);*/
     position: relative;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    justify-content: center;
+
+    padding: 100px;
+    filter: drop-shadow(0px 0px 33px #000000);
 
 }
+#Container > p {
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    /* -webkit-text-stroke: 1px rgb(0, 0, 0);
+    filter: drop-shadow(0px 5px rgb(111, 95, 255)); */
+    width: 50%;
+    min-width: 400px;
+    text-shadow: 0px 5px 10px rgb(10, 88, 255);
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+}
+#Container > img {
+    
+    max-width: 400px;
+    max-height: 400px;
+
+    width: 90%;
+    height: auto;
+   
+    filter: drop-shadow(0px 5px 10px rgb(38, 0, 255))
+}
+
+#BottomHeader {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: rgb(115, 148, 255);
+    position: relative;
+    filter: drop-shadow(0px 0px 33px #000000);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#BottomHeader > h1 {
+    width: 100%;
+}
+
+#BottomHeader > p {
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    /* -webkit-text-stroke: 1px rgb(0, 0, 0);
+    filter: drop-shadow(0px 5px rgb(111, 95, 255)); */
+    width: auto;
+    min-width: 400px;
+    text-shadow: 0px 5px 10px rgb(10, 88, 255);
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+}
+
 
 #selectedImage {
     position: absolute;
     transform: translate(-50%,-50%);
    
-    width: 60%;
+    width: 40%;
     max-width: 400px;
-    top: 30%;
+    top: 125px;
     left: 50%;
 
     transition: width .1s, filter .1s;
@@ -263,12 +381,15 @@ html{
    
     z-index: 1;
     width: 100%;
-    top: 130px;
+    top: 0px;
 
     height: 600px;
     
-    background-color: red;
-    
+    background-image: url("./assets/LANDING.png");
+    background-repeat: no-repeat;
+
+    background-size: cover;  
+
     /*background-color: rgb(255, 255, 255);*/
     position: relative;
 
@@ -278,7 +399,7 @@ html{
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
-    top: 240px;
+    top: 270px;
     font-size: 5em;
      
 }
@@ -290,7 +411,7 @@ html{
 
 #Topbar{
     width: 100%;
-    background-color: rgb(118, 157, 209);
+    background-color: rgb(115, 148, 255);
     height: 60px;
     z-index: 100;
     margin: 0px;
@@ -314,5 +435,11 @@ html{
         margin: 10px;
         margin-bottom: 50px;
     }
- 
+    #Container > p {
+        font-size: 1.5em;
+    }
+    #Container{
+        padding: 0px;
+        padding-bottom: 10px;
+    }
 }
