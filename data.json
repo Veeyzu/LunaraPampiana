@@ -4,14 +4,33 @@
             "Slime" : [
                 "Slime.png",
                 25000,
-                "Sticky stress toy made out of glue"
+                "Sticky stress toy made out of glue, you could request a specific color to be mixed with it or mix it yourself! [Ask for color availability]"
+
+            ],
+            "Clear Slime" : [
+                "ClearSlime.png",
+                25000,
+                "Sticky stress toy made out of glue, this one is clear!, you could request a specific color to be mixed with it or mix it yourself! [Ask for color availability]"
             ]
+           
         }, 
         "Stress Balls" : {
             "Stress Ball" : [
                 "StressBall.png",
-                10000,
+                15000,
                 "Orbeeze filled stress ball"
+            ]
+        },
+        "Bundles" : {
+            "Slime + Stress Ball" : [
+                "Bundle.png",
+                35000,
+                "A bundle contains Stress Ball and Custom Slime"
+            ],
+            "Clear Slime + Stress Ball" : [
+                "Bundle2.png",
+                35000,
+                "A bundle contains Stress Ball and Custom Clear Slime"
             ]
         }
        

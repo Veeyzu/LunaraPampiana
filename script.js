@@ -44,8 +44,8 @@ class newScroll{
             var iter = 0;
             for (const [key, value] of Object.entries(Data.Shop[this.Label])) {
                 if (iter == this.curIndex) {
-                    console.log( descDoc.querySelector("#Content"));
-                    console.log(value[2]);
+                    //console.log( descDoc.querySelector("#Content"));
+                    //console.log(value[2]);
                     descDoc.querySelector("#Content").innerHTML = value[2];
                     descDoc.querySelector("#selectedImage").src = "./assets/"+value[0];
                     descDoc.querySelector("#Price").innerHTML = "RP. "+ format(value[1]);
